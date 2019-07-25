@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>アルバイトカウント</title>
+</head>
+<body>
+    <div class="container">
+    <h1>アルバイト<i class="fas fa-coins"></i>カウント<i class="fas fa-history"></i></h1>
+    <form>
+        <ul>
+            <li class="list"> <span>1</span>　→　 <input type="text" class="baitoName1" placeholder="バイト名"><span class="jikyu1"></span></li>
+            <div id="input">
+                <input id="money1" type="number" placeholder="時給"> × <input id="time1" type="number" placeholder="1H~8H"> 
+                = <span class="input_partTime1"></span>
+                <input id="check1" type="button" value="登録"></input>
+            </div>
+
+            <li class="list"> <span>2</span>　→　<input type="text" class="baitoName2" placeholder="バイト名"><span class="jikyu2"></span></li>
+            <div id="input">
+                <input id="money2" type="number" value="" placeholder="時給">×<input id="time2" type="number" value="" placeholder="1H~8H">
+                = <span class="input_partTime2"></span>
+                <input id="check2" type="button" value="登録"></input>
+            </div>
+
+            <li class="list"> <span>3</span>　→　<input type="text" class="baitoName3" placeholder="バイト名"><span class="jikyu3"></span></li>
+            <div id="input">
+                <input id="money3" type="number" value="" placeholder="時給">×<input id="time3" type="number" value="" placeholder="1H~8H">
+                = <span class="input_partTime3"></span>
+                <input id="check3" type="button" value="登録"></input>
+            </div>
+        </ul>
+        <input id="date" type="text" placeholder="上記のバイト番号を入力してください。">
+        <input id="btn" class="add" type="button" value="出勤">
+    </form>
+    
+    <div class="resultBox">
+        <div class="partTime">
+            <div class="baito1"></div> <span class="partTime1_result"></span>　回
+        </div>
+        <p class="hoge"><span id="Yen1_result" class="txtCal1"></span>円</p>
+
+        <div class="partTime">
+            <div class="baito2"></div><span class="partTime2_result"></span>　回
+        </div>
+        <p class="hoge"><span id="Yen2_result" class="txtCal2"></span>円</p>
+
+        <div class="partTime">
+            <div class="baito3"></div><span class="partTime3_result"></span>　回
+        </div>
+        <p class="hoge"><span id="Yen3_result" class="txtCal3"></span>円</p>
+
+        <div class="partTime_total">
+            <div>Total: <span id="total"></span>　円</div>
+            <div class="btns">
+                <button id="total_btn">合計</button>
+                <button id="reset_btn">リセット</button>
+                <button id="recal_btn">再計算</button>
+            </div>
+        </div>
+   
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
